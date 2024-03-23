@@ -12,6 +12,10 @@
     "test": "jest --watchAll --no-cache"
   },
   "author": "Natnael Engeda",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natnaelengeda/nodets-express-starter"
+  },
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",

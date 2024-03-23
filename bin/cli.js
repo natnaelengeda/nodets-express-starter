@@ -1,36 +1,36 @@
 #!/usr/bin/env node
 
-const {execSync} = require('child_process');
+const { execSync } = require("child_process")
 
-const runCommand = command =>{
+const runCommand = command => {
   try {
-    execSync(command, {stdio: 'inherit'});
+    execSync(command, { stdio: "inherit" })
   } catch (error) {
-    console.error(`Failed to execute ${command}`, e);
-    return false;
+    console.error(`Failed to execute ${command}`, e)
+    return false
   }
-  return true;
+  return true
 }
 
-const repoName = process.argv[2];
-const gitCheckoutCommand = `git clone --depth 1 https://github.com/natnaelengeda/nodets-express-starter.git ${repoName}`;
-const installDepsCommand = `cd ${repoName} && npm install`;
+const repoName = process.argv[2]
+const gitCheckoutCommand = `git clone --depth 1 https://github.com/natnaelengeda/nodets-express-starter ${repoName}`
+const installDepsCommand = `cd ${repoName} && npm install`
 
-console.log(`Cloning the repository with name ${repoName}`);
-const checkedOut = runCommand(gitCheckoutCommand);
+console.log(`Cloning the repository with name ${repoName}`)
+const checkedOut = runCommand(gitCheckoutCommand)
 
 if (!checkedOut) {
-  process.exit(1);
+  process.exit(1)
 }
 
-console.log(`Installing dependencies for ${repoName}`);
-const installedDeps = runCommand(installDepsCommand);
+console.log(`Installing dependencies for ${repoName}`)
+const installedDeps = runCommand(installDepsCommand)
 
-if(!installedDeps) {
-  process.exit(1);
+if (!installedDeps) {
+  process.exit(1)
 }
 
-console.log("Congratulations! You are ready. Follow the following commands to start");
-console.log(`cd ${repoName} && npm start`);
-
-
+console.log(
+  "Congratulations! You are ready. Follow the following commands to start"
+)
+console.log(`cd ${repoName} && npm start`)
