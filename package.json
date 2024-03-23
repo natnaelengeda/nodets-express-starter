@@ -1,8 +1,9 @@
 {
-  "name": "nodets-express-starter",
+  "name": "@alamondai/nodets-express-starter",
   "version": "1.0.0",
   "description": "A Primary Backend Boilerplage for Nodets and Express",
   "main": "index.js",
+  "bin": ".bin/cli.js",
   "scripts": {
     "build": "tsc -b",
     "start": "node dist/index.js",
