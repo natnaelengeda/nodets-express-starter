@@ -26,7 +26,7 @@ app.use(cors({
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 }));
 
-// app.use(apiAuthMiddleware);
+app.use(apiAuthMiddleware);
 
 // Routes
 app.use('/', index);
