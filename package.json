@@ -1,6 +1,6 @@
 {
   "name": "@alamondai/nodets-express-starter",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A Primary Backend Boilerplage for Nodets and Express",
   "main": "index.js",
   "bin": "./bin/cli.js",
